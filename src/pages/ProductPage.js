@@ -8,18 +8,18 @@ const ProductPage = ({searchText}) => {
   const [products, setProducts] = useState("");
 
   useEffect(() => {
-    // if(searchText){
-    //   const params = { api_key: process.env.REACT_APP_RAINFOREST_API_KEY,   amazon_domain: "amazon.com",   type: "search", search_term : searchText };
-    //   axios.get('https://api.rainforestapi.com/request', { params })
-    //    .then(response => { 
-    //     console.log(JSON.stringify(response.data));
-    //     setProducts(response.data.search_results);
-    //      })
-    //    .catch(error => {  console.log(error);})
-    // }
+    if(searchText){
+      const params = { api_key: process.env.REACT_APP_RAINFOREST_API_KEY,   amazon_domain: "amazon.com",   type: "search", search_term : searchText };
+      axios.get('https://api.rainforestapi.com/request', { params })
+       .then(response => { 
+        console.log(JSON.stringify(response.data));
+        setProducts(response.data.search_results);
+         })
+       .catch(error => {  console.log(error);})
+    }
 
-   console.log(laptopData.search_results);
-   setProducts(laptopData.search_results);
+  //  console.log(laptopData.search_results);
+  //  setProducts(laptopData.search_results);
 
   },[searchText])
 
