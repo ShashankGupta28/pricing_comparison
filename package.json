@@ -4,6 +4,7 @@
   "description": "",
   "keywords": [],
   "main": "src/index.js",
+  "homepage": "https://shashankgupta28.github.io/pricing_comparison/",
   "dependencies": {
     "axios": "^1.8.4",
     "react": "17.0.2",
@@ -15,13 +16,16 @@
   },
   "devDependencies": {
     "@babel/runtime": "^7.27.0",
+    "gh-pages": "^6.3.0",
     "typescript": "3.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy" : "npm run build"
   },
   "browserslist": [
     ">0.2%",
